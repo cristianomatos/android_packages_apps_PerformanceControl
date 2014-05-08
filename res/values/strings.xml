@@ -38,6 +38,7 @@ Copyright (C) 2012  James Roberts
     <string name="t_time_in_state">"TIME IN STATE"</string>
     <string name="t_cpu_info">GENERAL INFO</string>
     <string name="t_disk_info">DISK INFO</string>
+    <string name="t_wake_controls">WAKE CONTROLS</string>
     <string name="t_tools">TOOLS</string>
 
     <string name="menu_tab">Tabs</string>
@@ -347,6 +348,17 @@ Copyright (C) 2012  James Roberts
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_toggle_drawer">Switch to Drawer</string>
     <string name="navigation_toggle_tabbed">Switch to Tabbed</string>
+
+    <!-- Wake controls -->
+    <string name="prefcat_wake_controls">Wake controls</string>
+    <string name="double_tap_2_wake_title">Double tap 2 wake</string>
+    <string name="double_tap_2_wake_summary">Wake your device by double taping the srceen</string>
+    <string name="sweep_2_wake_title">Sweep 2 wake</string>
+    <string name="sweep_2_wake_summary">Wake your device by double sweeping the srceen from left to right</string>
+    <string name="sweep_2_sleep_only_title">Sweep 2 sleep only</string>
+    <string name="sweep_2_sleep_only_summary">Sleep your device by sweeping from right to left on botton of the screen</string>
+    <string name="power_key_suspend_title">Power key suspend</string>
+    <string name="power_key_suspend_summary">Disbale any wake control when using power button to turn screen off. Wake controls will be restored when turn screen on</string>
 
     <string name="speed_limit_note">Note: Requires kernel support</string>
 </resources>

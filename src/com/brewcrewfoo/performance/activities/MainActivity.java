@@ -56,6 +56,7 @@ import com.brewcrewfoo.performance.fragments.TimeInState;
 import com.brewcrewfoo.performance.fragments.Tools;
 import com.brewcrewfoo.performance.fragments.VM;
 import com.brewcrewfoo.performance.fragments.VoltageControlSettings;
+import com.brewcrewfoo.performance.fragments.WakeControls;
 import com.brewcrewfoo.performance.util.ActivityThemeChangeInterface;
 import com.brewcrewfoo.performance.util.Constants;
 import com.brewcrewfoo.performance.util.Helpers;
@@ -403,7 +404,8 @@ public class MainActivity extends Fragment implements Constants, ActivityThemeCh
                             getString(R.string.t_adv_settings),
                             getString(R.string.t_time_in_state),
                             getString(R.string.t_cpu_info),
-                            getString(R.string.t_disk_info)};
+                            getString(R.string.t_disk_info),
+                            getString(R.string.t_wake_controls)};
                 } else {
                     DRAWER_MODE = 0;
                     titleString = new String[]{
@@ -416,7 +418,8 @@ public class MainActivity extends Fragment implements Constants, ActivityThemeCh
                             getString(R.string.t_time_in_state),
                             getString(R.string.t_cpu_info),
                             getString(R.string.t_disk_info),
-                            getString(R.string.t_tools)};
+                            getString(R.string.t_tools),
+                            getString(R.string.t_wake_controls)};
                 }
             } else {
                 if (getResources().getBoolean(R.bool.config_showPerformanceOnly)) {
@@ -429,7 +432,8 @@ public class MainActivity extends Fragment implements Constants, ActivityThemeCh
                             getString(R.string.t_adv_settings),
                             getString(R.string.t_time_in_state),
                             getString(R.string.t_cpu_info),
-                            getString(R.string.t_disk_info)};
+                            getString(R.string.t_disk_info),
+                            getString(R.string.t_wake_controls)};
                 } else {
                     DRAWER_MODE = 1;
                     titleString = new String[]{
@@ -441,7 +445,8 @@ public class MainActivity extends Fragment implements Constants, ActivityThemeCh
                             getString(R.string.t_time_in_state),
                             getString(R.string.t_cpu_info),
                             getString(R.string.t_disk_info),
-                            getString(R.string.t_tools)};
+                            getString(R.string.t_tools),
+                            getString(R.string.t_wake_controls)};
                 }
             }
         } else {
@@ -456,7 +461,8 @@ public class MainActivity extends Fragment implements Constants, ActivityThemeCh
                             getString(R.string.t_adv_settings),
                             getString(R.string.t_time_in_state),
                             getString(R.string.t_cpu_info),
-                            getString(R.string.t_disk_info)};
+                            getString(R.string.t_disk_info),
+                            getString(R.string.t_wake_controls)};
                 } else {
                     DRAWER_MODE = 2;
                     titleString = new String[]{
@@ -468,7 +474,8 @@ public class MainActivity extends Fragment implements Constants, ActivityThemeCh
                             getString(R.string.t_time_in_state),
                             getString(R.string.t_cpu_info),
                             getString(R.string.t_disk_info),
-                            getString(R.string.t_tools)};
+                            getString(R.string.t_tools),
+                            getString(R.string.t_wake_controls)};
                 }
             } else {
                 if (getResources().getBoolean(R.bool.config_showPerformanceOnly)) {
@@ -480,7 +487,8 @@ public class MainActivity extends Fragment implements Constants, ActivityThemeCh
                             getString(R.string.t_adv_settings),
                             getString(R.string.t_time_in_state),
                             getString(R.string.t_cpu_info),
-                            getString(R.string.t_disk_info)};
+                            getString(R.string.t_disk_info),
+                            getString(R.string.t_wake_controls)};
                 } else {
                     DRAWER_MODE = 3;
                     titleString = new String[]{
@@ -491,7 +499,8 @@ public class MainActivity extends Fragment implements Constants, ActivityThemeCh
                             getString(R.string.t_time_in_state),
                             getString(R.string.t_cpu_info),
                             getString(R.string.t_disk_info),
-                            getString(R.string.t_tools)};
+                            getString(R.string.t_tools),
+                            getString(R.string.t_wake_controls)};
                 }
             }
         }
@@ -545,6 +554,9 @@ public class MainActivity extends Fragment implements Constants, ActivityThemeCh
                 case FRAGMENT_ID_TOOLS:
                     fragment = new Tools();
                     break;
+                case FRAGMENT_ID_WAKECONTROLS:
+                    fragment = new WakeControls();
+                    break;
             }
 
             return fragment;
@@ -575,8 +587,9 @@ public class MainActivity extends Fragment implements Constants, ActivityThemeCh
                     frags[6] = new TimeInState();
                     frags[7] = new CPUInfo();
                     frags[8] = new DiskInfo();
+                    frags[9] = new WakeControls();
                     if (!getResources().getBoolean(R.bool.config_showPerformanceOnly)) {
-                        frags[9] = new Tools();
+                        frags[10] = new Tools();
                     }
                 } else {
                     frags[0] = new CPUSettings();
@@ -587,8 +600,9 @@ public class MainActivity extends Fragment implements Constants, ActivityThemeCh
                     frags[5] = new TimeInState();
                     frags[6] = new CPUInfo();
                     frags[7] = new DiskInfo();
+                    frags[8] = new WakeControls();
                     if (!getResources().getBoolean(R.bool.config_showPerformanceOnly)) {
-                        frags[8] = new Tools();
+                        frags[9] = new Tools();
                     }
                 }
             } else {
@@ -601,8 +615,9 @@ public class MainActivity extends Fragment implements Constants, ActivityThemeCh
                     frags[5] = new TimeInState();
                     frags[6] = new CPUInfo();
                     frags[7] = new DiskInfo();
+                    frags[8] = new WakeControls();
                     if (!getResources().getBoolean(R.bool.config_showPerformanceOnly)) {
-                        frags[8] = new Tools();
+                        frags[9] = new Tools();
                     }
                 } else {
                     frags[0] = new CPUSettings();
@@ -612,8 +627,9 @@ public class MainActivity extends Fragment implements Constants, ActivityThemeCh
                     frags[4] = new TimeInState();
                     frags[5] = new CPUInfo();
                     frags[6] = new DiskInfo();
+                    frags[7] = new WakeControls();
                     if (!getResources().getBoolean(R.bool.config_showPerformanceOnly)) {
-                        frags[7] = new Tools();
+                        frags[8] = new Tools();
                     }
                 }
             }

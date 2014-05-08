@@ -38,6 +38,7 @@ public interface Constants {
     public static final int FRAGMENT_ID_CPUINFO = 7;
     public static final int FRAGMENT_ID_DISKINFO = 8;
     public static final int FRAGMENT_ID_TOOLS = 9;
+    public static final int FRAGMENT_ID_WAKECONTROLS = 10;
 
     // CPU settings
     public static final String CPU_PATH = "/sys/devices/system/cpu/cpu";
@@ -206,6 +207,12 @@ public interface Constants {
     public static final String PREF_FIX_PERMS = "pref_fix_perms";
     public static final String PREF_LOG = "pref_log";
     public static final String PREF_OPTIM_DB = "pref_optim_db";
+
+    // Wake controls
+    public static final String DT2W_PATH = "/sys/android_touch/doubletap2wake";
+    public static final String S2W_PATH = "/sys/android_touch/sweep2wake";
+    public static final String S2W_SLEEPONLY_PATH = "/sys/android_touch/s2w_s2sonly";
+    public static final String POWER_KEY_SUSPEND_PATH = "/sys/module/qpnp_power_on/parameters/pwrkey_suspend";
 
     //Freezer
     public static final String PREF_FRREZE = "freeze_packs";
